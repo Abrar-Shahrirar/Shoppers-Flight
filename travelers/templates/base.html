@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>Luggage Party</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+{% load static %}
+<!-- CSS link -->
+<link rel="stylesheet" href="{% static 'styles/baseStyle.css' %}" />
+
+<body>
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">
+      &times;
+    </button>
+    <a href="{% url 'home' %}" class="w3-bar-item w3-button">Home</a>
+    <a href="{% url 'account_info' %}" class="w3-bar-item w3-button">Account Information</a>
+    <a href="{% url 'my_requests' %}" class="w3-bar-item w3-button">My Requests</a>
+    <a href="{% url 'post_requests'%}" class="w3-bar-item w3-button">Post Requests</a>
+    <a href="{% url 'flight_details' %}" class="w3-bar-item w3-button">Flight Details</a>
+    <a href="{% url 'complaints' %}" class="w3-bar-item w3-button">Complaints</a>
+    <a href="{% url 'payments_and_refunds' %}" class="w3-bar-item w3-button">Payments & Refunds</a>
+    <a href="{% url 'shipping_address' %}" class="w3-bar-item w3-button">Shipping Address</a>
+    <a href="{% url 'track_request' %}" class="w3-bar-item w3-button">Track Requests</a>
+    <a href="{% url 'pricing' %}" class="w3-bar-item w3-button">Price & Rates</a>
+    <a href="{% url 'support_tickets' %}" class="w3-bar-item w3-button">Support Tickets</a>
+    {% if request.session.email %}
+    <a href="{% url 'sign_out' %}">Sign Out</a>
+    {% else %}
+    <a href="{% url 'sign_in' %}" class="w3-bar-item w3-button">Sign In</a>
+    {% endif %}
+  </div>
+
+  <div id="main">
+    <div style="background-color: #004953">
+      <button style="color: floralwhite" id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">
+        &#9776;
+      </button>
+
+      <div style="background-color: #004953; color: floralwhite" class="w3-container">
+        <h1>Luggage Party</h1>
+      </div>
+    </div>
+
+    {% block content %}
+    <!-- this is our template -->
+    {% endblock %}
+  </div>
+
+  <!-- JS link -->
+  <script src="{% static 'js/indexScript.js' %}"></script>
+</body>
+
+</html>

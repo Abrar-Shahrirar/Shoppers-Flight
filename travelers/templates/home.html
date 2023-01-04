@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<img src="https://png.pngtree.com/background/20210709/original/pngtree-simple-summer-tourism-travel-picture-image_916927.jpg"
+    alt="Car" style="width: 100%" />
+
+<div class="w3-container">
+    <!-- change form action -->
+    <!-- <form action="travelerSign.html"> -->
+    <form action="{% url 'sign-up'%}">
+        <center>
+            <button class="btn btn-primary" style="width: auto">
+                Become A Traveler
+            </button>
+        </center>
+    </form>
+    <!-- TODO: Customer registration -->
+    <form action="CustomerSign.html">
+        <center>
+            <button class="btn btn-primary" style="width: auto">
+                Become A Customer
+            </button>
+        </center>
+    </form>
+</div>
+{% endblock %}
