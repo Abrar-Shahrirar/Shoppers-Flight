@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Shoppers Flight</title>
+      <link rel="stylesheet" href="flightDetailstyle.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body >
+    
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3 >SF<span></span></h3>
+        </div>
+        
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(https://i.pinimg.com/originals/cc/26/c6/cc26c619b2275ab469816b2cca895ea0.jpg)"></div>
+                <h4>Sunjida</h4>
+                <small>Traveler</small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="Udash.html" >
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="userProfile.html">
+                            <span class="las la-user-alt"></span>
+                            <small>Profile</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="postReq.html">
+                            <span class="las la-envelope"></span>
+                            <small>Post Request</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="flightDetails.html"class="active">
+                            <span class="las la-plane"></span>
+                            <small>Flight Details</small>
+                        </a>
+                    </li>
+
+                    <li>
+                       <a href="payment.html" >
+                            <span class="las la-clipboard-list"></span>
+                            <small>Paymrents</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="order.html" >
+                            <span class="las la-shopping-cart"></span>
+                            <small>Orders</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="index.html">
+                            <span class="las la-sign-out-alt"></span>
+                            <small>Logout</small>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+  <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(https://i.pinimg.com/originals/cc/26/c6/cc26c619b2275ab469816b2cca895ea0.jpg);cursor: pointer;"onclick="window.location='userProfile.html'">
+                        </div>
+                        <button type="button" onclick="window.location='index.html'"style="background:transparent;border: none;cursor: pointer;">
+                        <span class="las la-power-off"></span>
+                        <span>Logout</span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+<main>
+             <div class="page-header">
+                <h1>Flight Details</h1>
+            </div>
+
+<div class="container">
+  <div class="inputs">
+    <label for="flightDate">Flight Date:</label>
+    <input type="date" name="flightDate" size="30"/>
+
+    <label for="arrivaltDate">Arrival Date:</label>
+    <input type="date" name="arrivalDate" size="30"/>
+
+    <label for="country">Destination Country:</label>
+   <select name="country" >
+<option selected="" value="Default">(Please select a country)</option>
+<option value="AF">Bangladesh</option>
+<option value="AL">Canada</option>
+<option value="DZ">China</option>
+<option value="AS">Australia</option>
+<option value="AD">USA</option>
+</select>
+
+<label for="Ocountry">Origin Country:</label>
+<select name="Ocountry" >
+<option selected="" value="Default">(Please select a country)</option>
+<option value="AF">Bangladesh</option>
+<option value="AL">Canada</option>
+<option value="DZ">China</option>
+<option value="AS">Australia</option>
+<option value="AD">USA</option>
+</select>
+
+<label for="passport">Passport No.:</label>
+<input type="text" name="passport" pattern="(B)(M)[0-9]{7}" placeholder="BM 7-digits"  size="30"/>
+
+<label for="ticket">Ticket No.:</label>
+<input type="text" name="ticket" pattern="[0-9]{13}" placeholder="13-digits"  size="30"/>
+
+<label for="username">Airlines Name:</label>
+<input type="text" name="username" size="30"/>
+
+<label for="email">Email:</label>
+<input type="email" placeholder="example@test.com"/>
+
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="Enter 11 digit phone no."  size="30"/>
+
+<button class="btn" type="submit"  onClick="window.location='postReq.html'" >Submit</button>
+  </div>
+</div>
+
+</main>
+</div>
+  </body>
+</html>
