@@ -1,0 +1,33 @@
+/* Set a style for all buttons */
+.btn {
+  background-color: #004953;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+
+.btn:hover {
+  opacity:1;
+}
+
+.btn-primary{
+
+  position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  display: inline-block;
+appearance: auto;
+text-rendering: auto;
+
+
+}
+center {
+    display: block;
+    text-align: -webkit-center;
+}

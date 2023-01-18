@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<title>Laggage Party</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='js-form-validation.css' type='text/css' />
+<script src="sample-registration-form-validation.js"></script>
+<link rel="stylesheet" href="flightDetailstyle.css">
+
+<body onload="document.registration.flightDate.focus();">
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">&times;</button>
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="#" class="w3-bar-item w3-button">Account Information</a>
+  <a href="#" class="w3-bar-item w3-button">My Requests</a>
+  <a href="flightDetails.html" class="w3-bar-item w3-button">Post Requests</a>
+  <a href="flightDetails.html" class="w3-bar-item w3-button">Flight Details</a>
+  <a href="#" class="w3-bar-item w3-button">Complaints</a>
+  <a href="#" class="w3-bar-item w3-button">Payments &
+Refunds</a>
+  <a href="#" class="w3-bar-item w3-button">Shipping Address</a>
+  <a href="#" class="w3-bar-item w3-button">Track Requests</a>
+  <a href="#" class="w3-bar-item w3-button">Price & Rates</a>
+  <a href="#" class="w3-bar-item w3-button">Support Tickets</a>
+</div>
+
+<div id="main">
+
+<div style="background-color: #004953;">
+  <button style="color: floralwhite;"id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+  
+  <div style="background-color: #004953; color: floralwhite;"class="w3-container">
+    <h1>Traveler Flight Details</h1>
+  </div>
+</div>
+<form name='registration' onSubmit="return formValidation();">
+<ul>
+<li><label for="flightDate">Flight Date:</label></li>
+<li><input type="date" name="flightDate" size="30" required /></li>
+
+<li><label for="arrivaltDate">Arrival Date:</label></li>
+<li><input type="date" name="arrivalDate" size="30" required /></li>
+
+<li><label for="country">Destination Country:</label></li>
+<li><select name="country" >
+<option selected="" value="Default">(Please select a country)</option>
+<option value="AF">Bangladesh</option>
+<option value="AL">Canada</option>
+<option value="DZ">China</option>
+<option value="AS">Australia</option>
+<option value="AD">USA</option>
+</select></li>
+
+<li><label for="Ocountry">Origin Country:</label></li>
+<li><select name="Ocountry" >
+<option selected="" value="Default">(Please select a country)</option>
+<option value="AF">Bangladesh</option>
+<option value="AL">Canada</option>
+<option value="DZ">China</option>
+<option value="AS">Australia</option>
+<option value="AD">USA</option>
+</select></li>
+
+<li><label for="passport">Passport No.:</label></li>
+<li><input type="text" name="passport" pattern="(B)(M)[0-9]{7}" placeholder="BM 7-digits"  size="30"required /></li>
+
+<li><label for="ticket">Ticket No.:</label></li>
+<li><input type="text" name="ticket" pattern="[0-9]{13}" placeholder="13-digits"  size="30"required /></li>
+
+<li><label for="username">Airlines Name:</label></li>
+<li><input type="text" name="username" size="30" required/></li>
+
+<li><label for="email">Email:</label></li>
+<li><input type="text" name="email" size="30" /></li>
+
+<li><label for="phone">Phone:</label></li>
+<li><input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="Enter 11 digit phone no."  size="30"required /></li>
+
+
+
+<li><input type="submit" name="submit" value="Save Details" style="background-color:#004953;color: white; border-color: #004953;" onClick="" /></li>
+</ul>
+</form>
+<script src="flightDetails.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<title>Laggage Party</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="postStyle.css">
+  <link rel="stylesheet" href="flightDetailstyle.css">
+
+<body >
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">&times;</button>
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="#" class="w3-bar-item w3-button">Account Information</a>
+  <a href="#" class="w3-bar-item w3-button">My Requests</a>
+  <a href="flightDetails.html" class="w3-bar-item w3-button">Post Requests</a>
+  <a href="flightDetails.html" class="w3-bar-item w3-button">Flight Details</a>
+  <a href="#" class="w3-bar-item w3-button">Complaints</a>
+  <a href="#" class="w3-bar-item w3-button">Payments & Refunds</a>
+  <a href="#" class="w3-bar-item w3-button">Shipping Address</a>
+  <a href="#" class="w3-bar-item w3-button">Track Requests</a>
+  <a href="#" class="w3-bar-item w3-button">Price & Rates</a>
+  <a href="#" class="w3-bar-item w3-button">Support Tickets</a>
+</div>
+
+<div id="main">
+
+<div style="background-color: #004953;">
+  <button style="color: floralwhite;"id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+  
+  <div style="background-color: #004953; color: floralwhite;"class="w3-container">
+    <h1>Post Request</h1>
+  </div>
+</div>
+
+     <!-- Main Data Table -->
+        <div >
+        
+            <table id="table">
+                
+<tr>
+                    <th>Flight Date</th>
+                    <th>Destination Country</th>
+                    <th>Origin Country</th>
+                    <th>Last Booking Date</th>
+                
+                </tr>
+                
+                <tr>
+                  
+                    <td>27/10/2022</td>
+                    <td>USA</td>
+                    <td>Bangladesh</td>
+                    <td>30/10/2022</td>
+                    
+                </tr>
+
+                <tr>
+                    <th>Available Vacancy</th>
+                    <th>Mobiles</th>
+                    <th>Laptops</th>
+                    <th>Clothings</th>
+                    <th>Chocolates</th>
+                </tr>
+                
+                <tr>
+                  
+                    <td>20 kg</td>
+                    <td>2 Pcs</td>
+                    <td>2 Pcs</td>
+                    <td>5 kg</td>
+                    <td>3 kg</td>
+                </tr>
+                
+                
+               
+            </table>
+        </div>
+
+
+        <!-- Update Button -->
+        <div class="updateBtn">
+            <button  onclick="editTableDisplay()">Update data</button>
+        </div>
+
+        <!-- Edit table -->
+        <div class="editTable">
+            <div class="left">Available Vacancy: </div><div class="right"><input type="text" name="avac" id="avac" ></div><br><br>
+            <div class="left">Mobiles: </div><div class="right"><input type="text" name="mobile" id="mobile"></div><br><br>
+            <div class="left">Laptops: </div><div class="right"><input type="text" name="laptops" id="laptops"></div><br><br>
+            <div class="left">Clothings: </div><div class="right"><input type="text" name="clothing" id="clothing"></div><br><br>
+             <div class="left">Chocolates: </div><div class="right"><input type="text" name="chocolates" id="chocolates"></div><br><br>
+            <button onclick="editRow();" class="editRowBtn">Update</button><br><br>
+        </div>       
+
+      
+<script src="indexScript.js"></script>
+<script src="postScript.js"></script>
+
+</body>
+</html>

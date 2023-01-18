@@ -1,0 +1,35 @@
+
+form li {
+list-style: none;
+
+margin-bottom: 5px;
+}
+
+form ul li label{
+
+float: left;
+clear: left;
+width: 150px;
+text-align: left;
+margin-right: 10px;
+font-family: Arial;
+font-size:15px;
+}
+
+form ul li input, select, span {
+display: block;
+border-color: #004953;
+float: left;
+margin-bottom: 20px;
+}
+
+[type="submit"] {
+clear: left;
+margin: 20px 0 0 230px;
+font-size:15px
+}
+
+p {
+margin-left: 40px;
+
+}
