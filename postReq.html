@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Shoppers Flight</title>
+    <link rel="stylesheet" href="Udashstyle.css">
+    <link rel="stylesheet" href="flightDetailstyle.css">
+    <link rel="stylesheet" href="postStyle.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body onload="document.registration.flightDate.focus();">
+    
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3 >SF<span></span></h3>
+        </div>
+        
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(https://i.pinimg.com/originals/cc/26/c6/cc26c619b2275ab469816b2cca895ea0.jpg)"></div>
+                <h4>Sunjida</h4>
+                <small>Traveler</small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="Udash.html" >
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="userProfile.html">
+                            <span class="las la-user-alt"></span>
+                            <small>Profile</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="postReq.html" class="active">
+                            <span class="las la-envelope"></span>
+                            <small>Post Request</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="flightDetails.html">
+                            <span class="las la-plane"></span>
+                            <small>Flight Details</small>
+                        </a>
+                    </li>
+
+                    <li>
+                       <a href="payment.html" >
+                            <span class="las la-clipboard-list"></span>
+                            <small>Paymrents</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="order.html" >
+                            <span class="las la-shopping-cart"></span>
+                            <small>Orders</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="index.html">
+                            <span class="las la-sign-out-alt"></span>
+                            <small>Logout</small>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+  <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(https://i.pinimg.com/originals/cc/26/c6/cc26c619b2275ab469816b2cca895ea0.jpg);cursor: pointer;"onclick="window.location='userProfile.html'">
+                        </div>
+                        <button type="button" onclick="window.location='index.html'"style="background:transparent;border: none;cursor: pointer;">
+                        <span class="las la-power-off"></span>
+                        <span>Logout</span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+<main>
+            
+            <div class="page-header">
+                <h1>Post Request</h1>
+            </div>
+
+ <!-- Main Data Table -->
+        <div >
+        
+            <table id="table">
+                
+<tr>
+                    <th>Flight Date</th>
+                    <th>Destination Country</th>
+                    <th>Origin Country</th>
+                    <th>Last Booking Date</th>
+                
+                </tr>
+                
+                <tr>
+                  
+                    <td>27/10/2022</td>
+                    <td>USA</td>
+                    <td>Bangladesh</td>
+                    <td>30/10/2022</td>
+                    
+                </tr>
+
+                <tr>
+                    <th>Available Vacancy</th>
+                    <th>Mobiles</th>
+                    <th>Laptops</th>
+                    <th>Clothings</th>
+                    <th>Chocolates</th>
+                </tr>
+                
+                <tr>
+                  
+                    <td>20 kg</td>
+                    <td>2 Pcs</td>
+                    <td>2 Pcs</td>
+                    <td>5 kg</td>
+                    <td>3 kg</td>
+                </tr>
+                
+                
+               
+            </table>
+        </div>
+
+
+        <!-- Update Button -->
+        <div class="updateBtn">
+            <button  onclick="editTableDisplay()">Update data</button>
+        </div>
+
+        <!-- Edit table -->
+        <div class="editTable">
+            <div class="Up-left">Available Vacancy: </div>
+            <div class="Up-right"><input type="text" name="avac" id="avac" ></div><br><br>
+            <div class="Up-left">Mobiles: </div>
+            <div class="Up-right"><input type="text" name="mobile" id="mobile"></div><br><br>
+            <div class="Up-left">Laptops: </div>
+            <div class="Up-right"><input type="text" name="laptops" id="laptops"></div><br><br>
+            <div class="Up-left">Clothings: </div>
+            <div class="Up-right"><input type="text" name="clothing" id="clothing"></div><br><br>
+             <div class="Up-left">Chocolates: </div>
+             <div class="Up-right"><input type="text" name="chocolates" id="chocolates"></div><br><br>
+            <button onclick="editRow();" class="editRowBtn">Update</button><br><br>
+        </div>       
+
+
+</main>
+</div>
+
+<script src="D:\Documents\Semesters\Fall'22\CSE499A\LP\js\postScript.js"></script>
+  </body>
+</html>

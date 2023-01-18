@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shoppers flight</title>
+     <!--- css file----->
+    <link rel="stylesheet" href="login&signUp.css">
+   
+</head>
+
+
+<body>
+
+     <!--- Whole page----->
+    <div class="full-page">
+        <div class="navbar"> <!--- navigation bar----->
+            <div>
+                 <!--- Logo----->
+                <a href='index.html' class='logo'>SF</a>
+            </div>
+        </div>
+
+ <!--- toggle log in and registration form----->
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+
+
+ <!--- Log in form----->
+                <form id='login' class='input-group-login'>
+                    
+                    <input type='text'class='input-field'placeholder='Email Id'>
+		             
+                      <input type='password'class='input-field'placeholder='Enter Password'>
+                      <div>
+                          <select name="user_type">
+            <option value="traveler">Traveler</option>
+            <option value="customer">Customer</option>
+        </select>
+                      </div>
+                      
+		              
+                      <div style="color: #666; font-size: 14px;">
+                       <input type='checkbox' checked="checked" class='check-box'>Remember Password
+		                    </div>
+                            <button type='button'class='submit-btn' onclick="window.location='Udash.html'">Log in</button>
+
+
+                            <button type='button'class='cancel-btn'onclick="window.location='index.html'" >Cancel</button>
+		 </form>
+
+<!--- Registration form----->
+		 <form id='register' class='input-group-register'>
+		     <input type='text'class='input-field'placeholder='First Name' >
+		     
+		     <input type='email'class='input-field'placeholder='Email Id' >
+
+             <input type='text'class='input-field'placeholder='Contact no' >
+
+		     <input type='password'class='input-field'placeholder='Enter Password' >
+
+              <div>
+                          <select name="user_type">
+            <option value="traveler">Traveler</option>
+            <option value="customer">Customer</option>
+        </select>
+                      </div>
+
+             <div  style="color: #666; font-size: 14px;">
+		     <input type='checkbox'checked="checked" class='check-box' >I agree to the terms and conditions
+         </div>
+                    <button type='button'class='submit-btn' onclick="window.location='Udash.html'">Register</button>
+
+                    <button type='button'class='cancel-btn' onclick="window.location='index.html'">Cancel</button>
+	         </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	
+</body>
+</html>
